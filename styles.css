@@ -1,0 +1,10 @@
+/* Sobrescribir variables globales */
+.btn-outline-light {
+  --bs-bg-opacity: 1;
+  background-color: rgba(109, 206, 238, 0.8) !important;
+}
+
+.im1 {
+  margin-top: 50px;
+  background-color: aqua;
+}
