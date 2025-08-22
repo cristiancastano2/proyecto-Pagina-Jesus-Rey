@@ -1,34 +1,46 @@
-
-
 .navbar {
-  position: absolute;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    background-color: transparent !important; /* transparente */
-    z-index: 1; /* por encima del carrusel */
-  }
+    /* 🔴 CAMBIO AQUÍ: Usa RGBA para un color semitransparente */
+    background-color: rgba(0, 0, 0, 0.5); /* Negro con 50% de opacidad */
+    z-index: 10;
+}
 
+/* El color del texto debe ser claro para que se vea sobre el fondo oscuro */
 .navbar-brand, .nav-link {
-  color: rgb(70, 67, 67) !important; /* texto blanco */
+    color: white !important; 
 }
+
+/* 🟢 CÓDIGO AÑADIDO: Estilos para los botones de los iconos */
+.navbar .btn {
+    background-color: white !important; /* Fondo blanco para los botones */
+}
+
+/* 🟢 CÓDIGO AÑADIDO: Color de los iconos */
+.navbar .btn i {
+    color: black !important; /* Color negro para los iconos */
+}
+
+/* Contenedor del carrusel para que ocupe toda la pantalla */
+.carousel {
+    height: 100vh;
+}
+
+/* Imágenes dentro del carrusel */
 .carousel-item img {
-  height: 100vh; /* ocupa toda la pantalla */
-  object-fit: cover; /* recorte proporcional */
+    height: 100vh;
+    object-fit: cover;
 }
 
-.im1 {
-  margin-top: 50px;
-  background-color: aqua;
-}
-
-
-  .fade-in {
+/* El resto de tu CSS */
+.fade-in {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.8s ease, transform 0.8s ease;
-  }
-  .fade-in.show {
+}
+.fade-in.show {
     opacity: 1;
     transform: translateY(0);
-  }
+}
